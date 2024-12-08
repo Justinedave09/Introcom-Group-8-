@@ -4,29 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <title>Group 8</title>
     <style>
         body {
             background-image: url("resources/img/th.jpg");
-            }
-            
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 200px);
-            gap: 10px;
-            margin: 100px;     
-
-        }
-        .grid-item:nth-child(4) {
-            grid-column: span 2; /* Span two columns */
-        }
-
-        .grid-item:nth-child(5) {
-            grid-column: 3; /* Occupy the third column */
         }
 
         .grid-item {
@@ -34,38 +23,67 @@
             text-align: center;
             line-height: 100px;
             border: 1px solid #333;
-            margin: 10px;     
+            margin: 10px;
             width: 300px;
-            height:200px;
+            height: 200px;
             padding: 20px;
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            border-radius: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            background: rgba(255, 255, 255, 0.2); 
-            backdrop-filter: blur(10px); 
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
             border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.3); 
+            border: 1px solid rgba(255, 255, 255, 0.3);
             color: #fff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             transition: background 0.3s ease;
-            
         }
+
         .grid-item:hover {
             transform: scale(1.02);
-            background: rgba(255, 255, 255, 0.4); 
+            background: rgba(255, 255, 255, 0.2);
         }
-        
-
+        .grid-item img :hover {
+            border: 20px solid #7a8492;
+        }
         .profile-pic {
-      width: 150px;        
-      height: 150px;       
-      border-radius: 50%;  
-      object-fit: cover;    
-      border: 3px solid #042652; 
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #042652;
         }
-  
+
+        .grid-item h5 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Remove from view but keep it in layout */
+    transform: scale(0.8); /* Start slightly smaller */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.grid-item:hover h5 {
+    opacity: 1; /* Make visible */
+    visibility: visible;
+    transform: scale(1); /* Normal size */
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #042652;
+    transition: width 0.5s ease, height 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+.grid-item:hover .profile-pic {
+    width: 135px;
+    height: 135px;
+    transform: scale(1); /* Normal size */
+}
 
 
     </style>
@@ -73,33 +91,38 @@
 
 <body>
     <br><br><br><br><br><br>
-    <div class="grid-container">
-
-        <div class="grid-item" id="chua"> 
-            <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t39.30808-1/447295994_1954268551659116_621972281476560804_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=TlJgM_nTlwkQ7kNvgF_l4YQ&_nc_zt=24&_nc_ht=scontent.fmnl30-2.fna&_nc_gid=ARjqlj-LlfPbuSt18rEC3CE&oh=00_AYCJ6X5NPToOecNGKiQgwCd8jYTiGSuIAJkctdoj13E9Gw&oe=675B054E" alt="Profile Picture" class="profile-pic">
-            <h5>Justine Dave V. Chua</h5>
+    <div class="row d-flex justify-content-center" >
+        <div class="grid-item" id="chua">
+            <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t39.30808-1/447295994_1954268551659116_621972281476560804_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=TlJgM_nTlwkQ7kNvgF_l4YQ&_nc_zt=24&_nc_ht=scontent.fmnl30-2.fna&_nc_gid=ARjqlj-LlfPbuSt18rEC3CE&oh=00_AYCJ6X5NPToOecNGKiQgwCd8jYTiGSuIAJkctdoj13E9Gw&oe=675B054E"
+                alt="Profile Picture" class="profile-pic">
+            <h5 >Justine Dave V. Chua</h5>
         </div>
 
         <div class="grid-item" id="cotin">
-            <img src="https://scontent.fmnl30-3.fna.fbcdn.net/v/t39.30808-1/464847208_8538136516253098_6827461534671284167_n.jpg?stp=dst-jpg_s100x100_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=3mV6XQA6hEsQ7kNvgFeGStF&_nc_zt=24&_nc_ht=scontent.fmnl30-3.fna&_nc_gid=A2jDl6l7hj-iXSYrMjnmgKn&oh=00_AYCxF1wnW8tsvkifx7ewDaJ0ua-H7kaQDgZ5Hduwl_2Wqg&oe=675ABE9B" alt="Profile Picture" class="profile-pic">
+            <img src="https://scontent.fmnl30-3.fna.fbcdn.net/v/t39.30808-1/464847208_8538136516253098_6827461534671284167_n.jpg?stp=dst-jpg_s100x100_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=3mV6XQA6hEsQ7kNvgFeGStF&_nc_zt=24&_nc_ht=scontent.fmnl30-3.fna&_nc_gid=A2jDl6l7hj-iXSYrMjnmgKn&oh=00_AYCxF1wnW8tsvkifx7ewDaJ0ua-H7kaQDgZ5Hduwl_2Wqg&oe=675ABE9B"
+                alt="Profile Picture" class="profile-pic">
             <h5>Jethro Cotin</h5>
         </div>
 
         <div class="grid-item" id="pangyarihan">
-            <img src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t39.30808-1/456691957_2207184102999198_6740048487543391400_n.jpg?stp=dst-jpg_p100x100_tt6&_nc_cat=103&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=XksTT-18ulAQ7kNvgH0zjlp&_nc_zt=24&_nc_ht=scontent.fmnl30-1.fna&_nc_gid=AH8HcVI_JZFzRLqhiQ132wo&oh=00_AYCs6GJADkCn9FH6i8xo_IdUS8zR5b0OsyZtOm50BHngAw&oe=675AD3BF" alt="Profile Picture" class="profile-pic">
+            <img src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t39.30808-1/456691957_2207184102999198_6740048487543391400_n.jpg?stp=dst-jpg_p100x100_tt6&_nc_cat=103&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=XksTT-18ulAQ7kNvgH0zjlp&_nc_zt=24&_nc_ht=scontent.fmnl30-1.fna&_nc_gid=AH8HcVI_JZFzRLqhiQ132wo&oh=00_AYCs6GJADkCn9FH6i8xo_IdUS8zR5b0OsyZtOm50BHngAw&oe=675AD3BF"
+                alt="Profile Picture" class="profile-pic">
             <h5>Rich Christian Pangyarihan</h5>
         </div>
-        
-        <div class="grid-item" id="luya">
-            <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t39.30808-6/414956963_1362404597972469_7538175422694594719_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=0-6Tn1QM420Q7kNvgF5D4OF&_nc_zt=23&_nc_ht=scontent.fmnl30-2.fna&_nc_gid=A59itOiUVd81_x5u1AzmkWi&oh=00_AYAf0lH0m0DwHvoRFfbVqYy-Hx-Btb3NdDMSSeJfYOtGew&oe=675AD9E5" alt="Profile Picture" class="profile-pic">
-            <h5>Benjamin Luya</h5>
-        </div>
-                      
-        <div class="grid-item" id="reyes">
-            <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t39.30808-1/468732391_549170214665869_8665671209229473112_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=P9Ecmvx_fm0Q7kNvgF3jC8s&_nc_zt=24&_nc_ht=scontent.fmnl30-2.fna&_nc_gid=Ak70V18yn6Va8rxFSzO7Ule&oh=00_AYDvSz6S2zgNerf0UCsGHmTi-Ss7AHziDbw_8NeCH5xuiQ&oe=675B69F3" alt="Profile Picture" class="profile-pic">
-            <h5>Yvonne Delos Reyes</h5>
-        </div>
-        
+    </div>
+
+    <div class="row row d-flex justify-content-center">
+    <div class="grid-item" id="luya">
+        <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t39.30808-6/414956963_1362404597972469_7538175422694594719_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=0-6Tn1QM420Q7kNvgF5D4OF&_nc_zt=23&_nc_ht=scontent.fmnl30-2.fna&_nc_gid=A59itOiUVd81_x5u1AzmkWi&oh=00_AYAf0lH0m0DwHvoRFfbVqYy-Hx-Btb3NdDMSSeJfYOtGew&oe=675AD9E5"
+            alt="Profile Picture" class="profile-pic">
+        <h5>Benjamin Luya</h5>
+    </div>
+
+    <div class="grid-item" id="reyes">
+        <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t39.30808-1/468732391_549170214665869_8665671209229473112_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=P9Ecmvx_fm0Q7kNvgF3jC8s&_nc_zt=24&_nc_ht=scontent.fmnl30-2.fna&_nc_gid=Ak70V18yn6Va8rxFSzO7Ule&oh=00_AYDvSz6S2zgNerf0UCsGHmTi-Ss7AHziDbw_8NeCH5xuiQ&oe=675B69F3"
+            alt="Profile Picture" class="profile-pic">
+        <h5>Yvonne Delos Reyes</h5>
+    </div>
     </div>
 
 </body>

@@ -286,14 +286,15 @@ Page Styles
     overflow-y: auto;
     height: 100%;
     background: #fff;
-    border-right: 1px solid rgba(221, 221, 221, 0.38);
+    border-right: 1px solid rgba(221, 221, 221, 0.28);
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-left: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     border-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4); /* Add shadow */
+    padding-top: 50px;
 }
 
 .main-content {
@@ -304,9 +305,9 @@ Page Styles
     border-left: 1px solid rgba(221, 221, 221, 0.38);
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 50px;
     border-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4); /* Add shadow */
 }
 
 .logo {
@@ -330,7 +331,7 @@ Page Styles
 
 .nav {
     flex: 1;
-    /* display: flex; */
+    display: flex;
     justify-content: flex-end;
     margin: 50px 0px;
 }
@@ -341,6 +342,7 @@ Page Styles
 }
 
 .nav ul li a {
+  font-size: 17px;
     padding: 8px 0px;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.4);
@@ -527,4 +529,54 @@ Page Styles
     border: 3px solid #000000;
     display:flex;
     justify-content: center;
+    background-repeat: no-repeat;
+    image-rendering: -webkit-optimize-contrast;
 }
+.user-img{
+  width:auto; 
+}
+
+#map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  iframe {
+    border: 5px solid #000000; /* Adds a black border with specified thickness */
+    border-radius: 8px;       /* Optional: Rounded corners for the iframe */
+  }
+
+  .contact-info {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-info li {
+    font-size: 1.5em; /* Makes text large */
+    margin-bottom: 15px; /* Adds space between items */
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-info li i {
+    margin-right: 10px;
+  }
+  
+  .contact-info a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-info a:hover {
+  }

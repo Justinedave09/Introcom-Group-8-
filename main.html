@@ -15,7 +15,20 @@
     <title>Group 8</title>
     <style>
         body {
-            background-color: rgb(255, 255, 255);
+            background-image: url("resources/img/bg.jpg");
+            background-repeat: no-repeat;
+            /* Prevent the image from repeating */
+            background-size: cover; 
+            /* Ensure the image covers the entire screen */
+            background-position: center;
+            /* Center the background image */
+            background-attachment: fixed;
+            /* Make the background fixed while scrolling (optional) */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+
         }
 
         .grid-item {
@@ -41,11 +54,11 @@
 
         .grid-item:hover {
             transform: scale(1.01);
-            background: rgba(0, 0, 0, .9);
+            background: rgba(0, 0, 0, .4);
         }
 
         .grid-item img :hover {
-            border: 20px solid #ffffff;
+            border: 20px solid #1d21fc;
 
         }
 
@@ -88,48 +101,72 @@
             height: 135px;
             transform: scale(1);
             /* Normal size */
-            border: 2px solid #bebbbb;
+            border: 3px solid #383aaa;
 
         }
 
         a {
             text-decoration: none;
         }
-        #group{
+
+        #group {
             display: flex;
             justify-content: center;
+            font-family: 'Helvetica Neue', Arial, sans-serif; 
+            font-size: 36px;  
+            font-weight: 700;  
+            color: #333;  
+            text-align: center;  
+            text-transform: uppercase; 
+            letter-spacing: 2px;  
+            line-height: 1.4;  
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);  
+            margin: 0;  
+            padding: 10px 0;  
         }
-        #parent-group{
-            margin-top: 20px;
-            margin-left: 190px;
-            margin-right: 190px;
-    padding: 15px; /* Add padding inside the element */
-    background-color: #f9f9f9; /* Light background color */
-    border: 1px solid rgba(221, 221, 221, 0.5); /* Subtle border */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;    </style>
+
+        #parent-group {
+    margin-top: 20px;
+    margin-left: 190px;
+    margin-right: 190px;
+    padding: 15px;
+    background-color: rgba(249, 249, 249, 0.8); 
+    border: 1px solid rgba(221, 221, 221, 0.5); 
+    border-radius: 10px; 
+    box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
+    transition: all 0.3s ease;  
+}
+
+#parent-group:hover {
+    background-color: rgba(249, 249, 249, 1);  
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px, rgba(0, 0, 0, 0.4) 10px 10px, rgba(0, 0, 0, 0.3) 15px 15px, rgba(0, 0, 0, 0.2) 20px 20px, rgba(0, 0, 0, 0.1) 25px 25px;  /* Stronger shadow on hover */
+    transform: translateY(-5px); 
+}
+
+    </style>
 </head>
 
 <body>
 
     <div id="parent-group">
-        <h1 id="group" >GROUP 8</h1>
+        <h1 id="group">GROUP 8</h1>
     </div>
     <br><br><br>
     <div class="row d-flex justify-content-center">
         <a href="portfolios/chua.html" class="grid-item" id="chua">
-            <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t39.30808-1/447295994_1954268551659116_621972281476560804_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=TlJgM_nTlwkQ7kNvgF_l4YQ&_nc_zt=24&_nc_ht=scontent.fmnl30-2.fna&_nc_gid=ARjqlj-LlfPbuSt18rEC3CE&oh=00_AYCJ6X5NPToOecNGKiQgwCd8jYTiGSuIAJkctdoj13E9Gw&oe=675B054E"
+            <img src='resources/img/chua1.jpg'
                 alt="Profile Picture" class="profile-pic">
+                
             <h5>Justine Dave Chua</h5>
         </a>
 
-        <a href="" class="grid-item" id="cotin">
+        <a href="portfolios/cotin.html" class="grid-item" id="cotin">
             <img src="https://scontent.fmnl30-3.fna.fbcdn.net/v/t39.30808-1/464847208_8538136516253098_6827461534671284167_n.jpg?stp=dst-jpg_s100x100_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=3mV6XQA6hEsQ7kNvgFeGStF&_nc_zt=24&_nc_ht=scontent.fmnl30-3.fna&_nc_gid=A2jDl6l7hj-iXSYrMjnmgKn&oh=00_AYCxF1wnW8tsvkifx7ewDaJ0ua-H7kaQDgZ5Hduwl_2Wqg&oe=675ABE9B"
                 alt="Profile Picture" class="profile-pic">
             <h5>Jethro Cotin</h5>
         </a>
 
-        <a href="https://example.com/" class="grid-item" id="pangyarihan">
+        <a href="portfolios/pangyarihan.html" class="grid-item" id="pangyarihan">
             <img src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t39.30808-1/456691957_2207184102999198_6740048487543391400_n.jpg?stp=dst-jpg_p100x100_tt6&_nc_cat=103&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=XksTT-18ulAQ7kNvgH0zjlp&_nc_zt=24&_nc_ht=scontent.fmnl30-1.fna&_nc_gid=AH8HcVI_JZFzRLqhiQ132wo&oh=00_AYCs6GJADkCn9FH6i8xo_IdUS8zR5b0OsyZtOm50BHngAw&oe=675AD3BF"
                 alt="Profile Picture" class="profile-pic">
             <h5>Rich Christian Pangyarihan</h5>
@@ -137,14 +174,14 @@
     </div>
 
     <div class="row row d-flex justify-content-center">
-        <a href="https://example.com/" class="grid-item" id="luya">
+        <a href="portfolios/luya.html" class="grid-item" id="luya">
             <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t39.30808-6/414956963_1362404597972469_7538175422694594719_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=0-6Tn1QM420Q7kNvgF5D4OF&_nc_zt=23&_nc_ht=scontent.fmnl30-2.fna&_nc_gid=A59itOiUVd81_x5u1AzmkWi&oh=00_AYAf0lH0m0DwHvoRFfbVqYy-Hx-Btb3NdDMSSeJfYOtGew&oe=675AD9E5"
                 alt="Profile Picture" class="profile-pic">
             <h5>Benjamin Luya</h5>
         </a>
 
-        <a href="https://example.com/" class="grid-item" id="reyes">
-            <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t39.30808-1/468732391_549170214665869_8665671209229473112_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=P9Ecmvx_fm0Q7kNvgF3jC8s&_nc_zt=24&_nc_ht=scontent.fmnl30-2.fna&_nc_gid=Ak70V18yn6Va8rxFSzO7Ule&oh=00_AYDvSz6S2zgNerf0UCsGHmTi-Ss7AHziDbw_8NeCH5xuiQ&oe=675B69F3"
+        <a href="portfolios/reyes.html" class="grid-item" id="reyes">
+            <img src='resources/img/reyes.jpg'
                 alt="Profile Picture" class="profile-pic">
             <h5>Yvonne Delos Reyes</h5>
         </a>

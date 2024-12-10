@@ -33,14 +33,18 @@ html {
   height: 100%;
 }
 body {
+  background-image: url('resources/img/bg1.jpg');
+  background-size: cover; /* Ensures the image covers the whole background */
+  background-position: center center; /* Centers the image */
   height: 100%;
   font-family: 'Quicksand', sans-serif;
- color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.6);
   box-sizing: border-box;
   font-size: 14px;
   overflow: hidden;
-  background: #fafafa;
+  background: #fafafa; /* Fallback color in case the image doesn't load */
 }
+
 label {
   padding: 0;
   margin: 0;
